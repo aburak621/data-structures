@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
+  "rules": {
+    "semi": "error",
+    "quotes": "error",
+    "indent": "error",
+    "no-use-before-define": "off",
+    "no-param-reassign": "off",
+    "consistent-return": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "webpack.*.js"
+        ]
+      }
+    ]
+  },
+  "env": {
+    "browser": "true"
+  }
+}
