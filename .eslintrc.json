@@ -9,6 +9,7 @@
     "indent": "error",
     "no-use-before-define": "off",
     "no-param-reassign": "off",
+    "no-plusplus": "off",
     "consistent-return": "off",
     "import/no-extraneous-dependencies": [
       "error",
@@ -20,6 +21,6 @@
     ]
   },
   "env": {
-    "browser": "true"
+    "browser": true
   }
 }
