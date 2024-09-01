@@ -20,6 +20,20 @@ class LinkedList {
     this.size++;
   }
 
+  appendKey(key, value) {
+    const node = new Node();
+    node.key = key;
+    node.value = value;
+
+    if (this.head === null) {
+      this.head = node;
+    } else {
+      this.tail.next = node;
+    }
+    this.tail = node;
+    this.size++;
+  }
+
   prepend(value) {
     const node = new Node();
     node.value = value;
@@ -80,12 +94,28 @@ class LinkedList {
     return -1;
   }
 
+  findKey(key) {
+    let currentNode = this.head;
+    let currentIndex = 0;
+
+    while (currentNode !== null) {
+      if (currentNode.key === key) {
+        return currentIndex;
+      }
+
+      currentNode = currentNode.next;
+      currentIndex++;
+    }
+
+    return -1;
+  }
+
   toString() {
     let str = '';
     let currentNode = this.head;
 
     while (currentNode !== null) {
-      str += `( ${currentNode.value} ) -> `;
+      str += `( ${currentNode.key ? `${currentNode.key}: ` : ''}${currentNode.value} ) -> `;
       currentNode = currentNode.next;
     }
     str += 'null';
