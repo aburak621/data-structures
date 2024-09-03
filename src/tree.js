@@ -223,6 +223,12 @@ class Tree {
 
     return Math.abs(leftHeight - rightHeight) < 2;
   }
+
+  rebalance() {
+    const array = [];
+    this.inOrder(node => array.push(node.value));
+    this.buildTree(array);
+  }
 }
 
 const prettyPrint = (node, prefix = '', isLeft = true) => {
