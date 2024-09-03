@@ -180,6 +180,21 @@ class Tree {
     this.postOrder(callback, node.right);
     callback(node);
   }
+
+  height(node) {
+    if (node === null) {
+      return -1;
+    }
+
+    const left = this.height(node.left);
+    const right = this.height(node.right);
+
+    return Math.max(left, right) + 1;
+  }
+
+  depth(node) {
+
+  }
 }
 
 const prettyPrint = (node, prefix = '', isLeft = true) => {
