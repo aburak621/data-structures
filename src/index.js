@@ -10,6 +10,12 @@ tree.insert(25);
 tree.deleteItem(3);
 prettyPrint(tree.root);
 tree.levelOrder(node => console.log(node.value));
+console.log('\n');
+tree.inOrder(node => console.log(node.value));
+console.log('\n');
+tree.preOrder(node => console.log(node.value));
+console.log('\n');
+tree.postOrder(node => console.log(node.value));
 
 // const list = new LinkedList();
 //
