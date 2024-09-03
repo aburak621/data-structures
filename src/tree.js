@@ -193,7 +193,24 @@ class Tree {
   }
 
   depth(node) {
+    let temp = this.root;
+    let depth = 0;
 
+    while (true) {
+      if (temp === null) {
+        return -1;
+      }
+
+      if (node.value < temp.value) {
+        temp = temp.left;
+        depth++;
+      } else if (node.value > temp.value) {
+        temp = temp.right;
+        depth++;
+      } else {
+        return depth;
+      }
+    }
   }
 }
 
