@@ -97,6 +97,22 @@ class Tree {
       }
     }
   }
+
+  find(value) {
+    let node = this.root;
+
+    while (node !== null) {
+      if (value < node.value) {
+        node = node.left;
+      } else if (value > node.value) {
+        node = node.right;
+      } else {
+        return node;
+      }
+    }
+
+    return null;
+  }
 }
 
 const prettyPrint = (node, prefix = '', isLeft = true) => {
