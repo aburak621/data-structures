@@ -9,7 +9,7 @@ tree.insert(20);
 tree.insert(25);
 tree.deleteItem(3);
 prettyPrint(tree.root);
-console.log(tree.find(8));
+tree.levelOrder(node => console.log(node.value));
 
 // const list = new LinkedList();
 //
