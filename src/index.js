@@ -9,8 +9,6 @@ tree.insert(20);
 tree.insert(25);
 tree.deleteItem(3);
 prettyPrint(tree.root);
-// console.log(tree.height(tree.find(8)));
-// console.log(tree.depth(tree.find(4)));
 // tree.levelOrder(node => console.log(node.value));
 // console.log('\n');
 // tree.inOrder(node => console.log(node.value));
@@ -18,6 +16,9 @@ prettyPrint(tree.root);
 // tree.preOrder(node => console.log(node.value));
 // console.log('\n');
 // tree.postOrder(node => console.log(node.value));
+// console.log(tree.height(tree.find(8)));
+// console.log(tree.depth(tree.find(4)));
+// console.log(tree.isBalanced());
 
 // const list = new LinkedList();
 //

@@ -212,6 +212,17 @@ class Tree {
       }
     }
   }
+
+  isBalanced() {
+    if (this.root === null) {
+      return null;
+    }
+
+    const leftHeight = this.height(this.root.left);
+    const rightHeight = this.height(this.root.right);
+
+    return Math.abs(leftHeight - rightHeight) < 2;
+  }
 }
 
 const prettyPrint = (node, prefix = '', isLeft = true) => {
